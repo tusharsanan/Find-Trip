@@ -1,0 +1,93 @@
+@import '../scss/helpers/variables';
+@import '../scss/helpers/partials';
+
+h1 {
+    color: $primary-color;
+    padding-bottom: 30px;
+}
+
+.container {
+    @extend %center-align;
+    max-width: $break-medium;
+    padding: $small-padding;
+}
+
+.itinerary-heading {
+    padding: $minor-padding;
+    background: $primary-color;
+    color: $base-color;
+    margin-bottom: 20px;
+}
+
+.passenger-booking {
+     border: 2px solid #767676;
+     border-radius: 3px;
+     overflow: hidden;
+    .passenger-booking__quickView {
+        overflow: hidden;
+        img {
+             @media screen and (max-width: $break-small) {
+                float: none;
+             }
+            width: 60px;
+            height: 40px;
+            float: left;
+            margin-right: 50px;
+        }
+        .passenger-booking__quickViewDetails {
+            overflow: hidden;
+            div {
+                width: 33%;
+            }
+            margin-top: 5px;
+            .to-and-from {
+                .display-inline {
+                    width: 100%;
+                    span {
+                        display: inline;
+                    }
+                }
+            }
+            .to-and-from, .flight-number, .passenger-details {
+                span {
+                    display: block;
+                }
+                span.small-description {
+                    font-weight: normal;
+                    margin-bottom: 5px;
+                    color: #000;
+                    font-weight: bold;
+                }
+                float: left;
+                font-weight: bold;
+            }
+        }
+        background: $primary-color;
+        padding: 10px;
+        color: $base-color;
+    }
+    .passenger-booking__detailView {
+        padding: 15px;
+        overflow: hidden;
+        .passenger-booking__row {
+            overflow: hidden;
+            .details--align {
+                @media screen and (max-width: $break-small) {
+                    width: 100%;
+                }
+                width: 25%;
+                float: left;
+                padding-right: 20px;
+                &:last-child {
+                    padding-right: 0;
+                }
+                p {
+                    font-weight: bold;
+                }
+            }
+            h3 {
+                color: $primary-color;
+            }
+        }
+    }
+}

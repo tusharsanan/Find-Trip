@@ -1,0 +1,59 @@
+<div class="header">
+  <p>CHECK IN</p>
+</div>
+
+<div class="container">
+  <div class="retrieve-booking-module">
+    <div class="retrieve-booking-module__heading">
+      <h1>RETRIEVE YOUR BOOKING</h1>
+      <div>__</div>
+    </div>
+
+    <p>You can find your booking by filling out your family name and 
+      the booking code in your booking confirmation.</p>
+
+    <form novalidate [formGroup]="findTrip" (ngSubmit)="retrieveBooking()">
+      <div *ngIf="bookingError" class="error-msg">
+        <i class="fa fa-times-circle"></i> {{bookingError.message}}
+      </div>
+
+      <div class="retrieve-booking-module__inputs">
+        <label>
+          <span><strong>Booking code</strong></span>
+          <input type="text" placeholder="Enter booking code" id="bookingCode" formControlName="bookingCode" />
+        </label>
+
+        <div ngxErrors="bookingCode">
+          <div [ngxError]="['minlength', 'maxlength']" [when]="['dirty', 'touched']" class="error-text">
+            Booking code should be 5 characters minimum, 6 characters maximum.
+          </div>
+          <div ngxError="pattern" when="touched" class="error-text">
+            The valid digits allowed are between 2-9.
+          </div>
+        </div>
+
+      </div>
+
+      <div class="retrieve-booking-module__inputs">
+        <label>
+         <span><strong>Family name</strong></span>
+          <input type="text" placeholder="Enter family name" id="familyName" formControlName="familyName" >
+        </label>
+        
+        <div ngxErrors="familyName">
+          <div [ngxError]="['minlength', 'maxlength']" [when]="['dirty', 'touched']"  class="error-text">
+            Family name should be 2 characters minimum, 30 characters maximum.
+          </div>
+          <div ngxError="pattern" when="touched"  class="error-text">
+            Only alphabets are allowed in Family name.
+          </div>
+        </div>
+        
+      </div>
+
+      <div class="retrieve-booking-module__retrieve-button">
+        <button type="submit" class="retrieve-booking-module__retrieve-button--primary" value="submit">Retrieve booking</button>
+      </div>
+    </form>
+  </div>
+</div>

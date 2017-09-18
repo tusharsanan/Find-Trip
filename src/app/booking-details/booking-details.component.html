@@ -1,0 +1,154 @@
+<div class="booking-details">
+    <div class="container">
+        <h1>Your booking details</h1>
+
+        <div class="passenger-booking">
+            <div class="passenger-booking__quickView">
+                <img src="../../assets/images/KLM-logo-white.gif" />
+
+                <div class="passenger-booking__quickViewDetails">                    
+                    <div class="to-and-from">
+                        <span class="small-description">
+                            Travelling from
+                        </span>
+                        <div class="display-inline">
+                            <span>{{bookingItinery.itinerary.connections[0].segments[0].departFrom.IATACode}}</span>
+                            <span> -> </span>
+                            <span>{{bookingItinery.itinerary.connections[0].segments[0].arriveOn.IATACode}}</span>
+                        </div>
+                    </div>
+
+                    <div class="flight-number">
+                        <span class="small-description">
+                            Flight Name
+                        </span>
+                        {{bookingItinery.itinerary.connections[0].segments[0].marketingFlight.carrier.name}}
+                        {{bookingItinery.itinerary.connections[0].segments[0].
+                        marketingFlight.operatingFlight.number }}
+                    </div>
+
+                    <div class="passenger-details">
+                        <span class="small-description">
+                            Passenger Name
+                        </span>
+                        {{bookingItinery.passengers.title.code}} {{bookingItinery.passengers.lastName}} / 
+                        {{bookingItinery.passengers.firstName}}
+                    </div>
+                </div>
+            </div>
+
+            <div class="passenger-booking__detailView">
+                <div class="passenger-booking__row margin-bottom">
+
+                    <div class="details--align">
+                        <p>Passenger</p>
+                        <h3>
+                            <strong>
+                                {{bookingItinery.passengers.title.code}} 
+                                {{bookingItinery.passengers.lastName}} / 
+                                {{bookingItinery.passengers.firstName}}
+                            </strong>
+                        </h3>
+                    </div>
+
+                    <div class="details--align">
+                        <p>Date</p>
+                        <h3>
+                            <strong>
+                                {{bookingItinery.itinerary.connections[0].segments[0].marketingFlight.
+                                operatingFlight.scheduledDeparture | date: 'longDate'}}
+                            </strong>
+                        </h3>
+                    </div>
+
+                </div>
+                <div class="passenger-booking__row margin-bottom">
+                    <div class="details--align">
+                        <p>Flight number</p>
+                        <h3>
+                            <strong>
+                                {{bookingItinery.itinerary.connections[0].segments[0].
+                                marketingFlight.carrier.name}}
+                                {{bookingItinery.itinerary.connections[0].segments[0].
+                                marketingFlight.operatingFlight.number}}
+                            </strong>
+                        </h3>
+                    </div>
+                    
+                    <div class="details--align">
+                        <p>Depart from</p>
+                        <h3>
+                            <strong>
+                                {{bookingItinery.itinerary.connections[0].segments[0].departFrom.name}}
+                                ({{bookingItinery.itinerary.connections[0].segments[0].departFrom.IATACode}})
+                            </strong>
+                        </h3>
+                    </div>
+
+                    <div class="details--align">
+                        <p>Arrival at</p>
+                        <h3>
+                            <strong>
+                                {{bookingItinery.itinerary.connections[0].segments[0].arriveOn.name}}
+                                ({{bookingItinery.itinerary.connections[0].segments[0].arriveOn.IATACode}})
+                            </strong>
+                        </h3>
+                    </div>
+
+                    <div class="details--align">
+                        <p>Check-in start at</p>
+                        <h3>
+                            <strong>
+                                {{bookingItinery.itinerary.connections[0].segments[0].
+                                marketingFlight.operatingFlight.checkInStart | date: 'medium'}}
+                            </strong>
+                        </h3>
+                    </div>
+
+                </div>
+                <div class="passenger-booking__row">
+                    <div class="details--align">
+                        <p>Cabin</p>
+                        <h3>
+                            <strong>
+                                {{bookingItinery.itinerary.connections[0].segments[0].
+                                marketingFlight.operatingFlight.cabin.name}}
+                                {{bookingItinery.itinerary.connections[0].segments[0].
+                                marketingFlight.operatingFlight.cabin.code}}
+                            </strong>
+                        </h3>
+                    </div>
+                    <div class="details--align">
+                        <p>Seat Number</p>
+                        <h3>
+                            <strong>
+                                {{bookingItinery.itinerary.connections[0].segments[0].
+                                marketingFlight.operatingFlight.equipment.code}}
+                            </strong>
+                        </h3>
+                    </div>
+                    <div class="details--align">
+                        <p>Departure Time</p>
+                        <h3>
+                            <strong>
+                                {{bookingItinery.itinerary.connections[0].segments[0].
+                                marketingFlight.operatingFlight.scheduledDeparture | date: 'shortTime'}}
+                            </strong>
+                        </h3>
+                    </div>
+
+                    <div class="details--align">
+                        <p>Arrival Time</p>
+                        <h3>
+                            <strong>
+                                {{bookingItinery.itinerary.connections[0].segments[0].
+                                marketingFlight.operatingFlight.scheduledArrival | date: 'shortTime'}}
+                            </strong>
+                        </h3>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

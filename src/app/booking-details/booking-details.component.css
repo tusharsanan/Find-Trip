@@ -1,0 +1,73 @@
+.container {
+  margin: 0 auto; }
+
+h1 {
+  color: #00a1de;
+  padding-bottom: 30px; }
+
+.container {
+  max-width: 960px;
+  padding: 20px; }
+
+.itinerary-heading {
+  padding: 10px;
+  background: #00a1de;
+  color: #FFF;
+  margin-bottom: 20px; }
+
+.passenger-booking {
+  border: 2px solid #767676;
+  border-radius: 3px;
+  overflow: hidden; }
+  .passenger-booking .passenger-booking__quickView {
+    overflow: hidden;
+    background: #00a1de;
+    padding: 10px;
+    color: #FFF; }
+    .passenger-booking .passenger-booking__quickView img {
+      width: 60px;
+      height: 40px;
+      float: left;
+      margin-right: 50px; }
+      @media screen and (max-width: 570px) {
+        .passenger-booking .passenger-booking__quickView img {
+          float: none; } }
+    .passenger-booking .passenger-booking__quickView .passenger-booking__quickViewDetails {
+      overflow: hidden;
+      margin-top: 5px; }
+      .passenger-booking .passenger-booking__quickView .passenger-booking__quickViewDetails div {
+        width: 33%; }
+      .passenger-booking .passenger-booking__quickView .passenger-booking__quickViewDetails .to-and-from .display-inline {
+        width: 100%; }
+        .passenger-booking .passenger-booking__quickView .passenger-booking__quickViewDetails .to-and-from .display-inline span {
+          display: inline; }
+      .passenger-booking .passenger-booking__quickView .passenger-booking__quickViewDetails .to-and-from, .passenger-booking .passenger-booking__quickView .passenger-booking__quickViewDetails .flight-number, .passenger-booking .passenger-booking__quickView .passenger-booking__quickViewDetails .passenger-details {
+        float: left;
+        font-weight: bold; }
+        .passenger-booking .passenger-booking__quickView .passenger-booking__quickViewDetails .to-and-from span, .passenger-booking .passenger-booking__quickView .passenger-booking__quickViewDetails .flight-number span, .passenger-booking .passenger-booking__quickView .passenger-booking__quickViewDetails .passenger-details span {
+          display: block; }
+        .passenger-booking .passenger-booking__quickView .passenger-booking__quickViewDetails .to-and-from span.small-description, .passenger-booking .passenger-booking__quickView .passenger-booking__quickViewDetails .flight-number span.small-description, .passenger-booking .passenger-booking__quickView .passenger-booking__quickViewDetails .passenger-details span.small-description {
+          font-weight: normal;
+          margin-bottom: 5px;
+          color: #000;
+          font-weight: bold; }
+  .passenger-booking .passenger-booking__detailView {
+    padding: 15px;
+    overflow: hidden; }
+    .passenger-booking .passenger-booking__detailView .passenger-booking__row {
+      overflow: hidden; }
+      .passenger-booking .passenger-booking__detailView .passenger-booking__row .details--align {
+        width: 25%;
+        float: left;
+        padding-right: 20px; }
+        @media screen and (max-width: 570px) {
+          .passenger-booking .passenger-booking__detailView .passenger-booking__row .details--align {
+            width: 100%; } }
+        .passenger-booking .passenger-booking__detailView .passenger-booking__row .details--align:last-child {
+          padding-right: 0; }
+        .passenger-booking .passenger-booking__detailView .passenger-booking__row .details--align p {
+          font-weight: bold; }
+      .passenger-booking .passenger-booking__detailView .passenger-booking__row h3 {
+        color: #00a1de; }
+
+/*# sourceMappingURL=booking-details.component.css.map */

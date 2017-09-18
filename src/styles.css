@@ -1,0 +1,44 @@
+* {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	outline: none;
+	font-weight: inherit;
+	font-style: inherit;
+	border: none;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "MavenPro-Regular";
+  src: url("./assets/fonts/MavenPro-Regular.ttf");
+}
+
+*::before, *::after {
+	box-sizing: border-box;
+}
+
+html {
+	font-family: MavenPro-Regular;
+	color: #003145;
+}
+
+strong {
+	font-weight: bold;
+}
+
+body input {
+	border: solid 1px #767676;
+    padding: 10px;
+	width: 100%;
+	border-radius: 2px;
+}
+
+p {
+	line-height: 20px;
+}
+
+.margin-bottom {
+	margin-bottom: 20px;
+}
