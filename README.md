@@ -1,17 +1,28 @@
-# Find-Trip
-This is to retrieve the booking details for a passenger by doing web check in.
+# TEST
 
-This project is built on Angular 4 with TypeScript, HTML5, CSS3, SCSS, fully responsive and Angular-CLI is used to bootstrap the application.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.6.
 
-There are a couple of components and services powering this application. The first component is the find trip component which allows the user to enter his/her booking code and family name. The component consists of a reactive form, built using ReactiveFormsModule to capture the user's booking code, family name, and has a 'Retrieve booking' button which the users can click to retrieve the booking (if present). This component throws several field level validation errors on booking code and family name, and some top level error messages if the trip details are not found or if either one of the booking code or the family name input field is empty.
-This component has its template in an external file, the component level SCSS in an external SCSS file. The corresponding compiled CSS files are generated next to the SCSS files, using Koala.
+## Development server
 
-Once the user clicks on 'Retrieve booking', in a happy path scenario, there is a service call which fetches the data from a mock json file, and if the user inputs matches the data with the mock json file, routing happens which takes the user to Details view. The mock json file is placed in the assests folder.
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-The next component is the Booking Details component, which displays the user's flight data to him/her, if found. This view will list down the passenger's name, date, flight number, depart from, arrive at, the check in start date, the cabin details, the seat number, departure time and arrival time, and is responsive as well.
+## Code scaffolding
 
-The RetrieveBookingService is responsible for retrieving mock trip data and inject into the find trip component. The service call involves the use of Observables from RxJS and HTTP module to fetch the data from mock.json and return corresponding errors if not found.
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|module`.
 
-With the help of Karma and Jasmine, the unit testing for the components and services has been done and protractor is used for basic End to End testing.
+## Build
 
-Kindly use the Booking Code: PZIGZ3 and Family Name: HESP to retrieve the booking details.
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+
+## Running unit tests
+
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Before running the tests make sure you are serving the app via `ng serve`.
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
