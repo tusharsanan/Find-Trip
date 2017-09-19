@@ -20,7 +20,6 @@ describe('BookingDetailsComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(BookingDetailsComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should be created', () => {

@@ -6,7 +6,7 @@
             <div class="passenger-booking__quickView">
                 <img src="../../assets/images/KLM-logo-white.gif" />
 
-                <div class="passenger-booking__quickViewDetails">                    
+                <div class="passenger-booking__quickViewDetails">
                     <div class="to-and-from">
                         <span class="small-description">
                             Travelling from
@@ -21,18 +21,15 @@
                     <div class="flight-number">
                         <span class="small-description">
                             Flight Name
-                        </span>
-                        {{bookingItinery.itinerary.connections[0].segments[0].marketingFlight.carrier.name}}
-                        {{bookingItinery.itinerary.connections[0].segments[0].
-                        marketingFlight.operatingFlight.number }}
+                        </span> {{bookingItinery.itinerary.connections[0].segments[0].marketingFlight.carrier.name}}
+                        {{bookingItinery.itinerary.connections[0].segments[0]. marketingFlight.operatingFlight.number }}
                     </div>
 
                     <div class="passenger-details">
                         <span class="small-description">
                             Passenger Name
-                        </span>
-                        {{bookingItinery.passengers.title.code}} {{bookingItinery.passengers.lastName}} / 
-                        {{bookingItinery.passengers.firstName}}
+                        </span> {{bookingItinery.passengers.title.code}} {{bookingItinery.passengers.lastName}}
+                        / {{bookingItinery.passengers.firstName}}
                     </div>
                 </div>
             </div>
@@ -74,7 +71,7 @@
                             </strong>
                         </h3>
                     </div>
-                    
+
                     <div class="details--align">
                         <p>Depart from</p>
                         <h3>
